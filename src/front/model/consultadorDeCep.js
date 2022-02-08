@@ -1,13 +1,15 @@
 class ConsultadorDeCep {
-    constructor(cep) {
-        this.cep = cep;
-    }
-    consultaCep() {
+    consultaCep(cep) {
         $.ajax({
-            url: `https://viacep.com.br/ws/${this.cep}/json/`,
+            url: `https://viacep.com.br/ws/${cep}/json/`,
             success: (resultado) => {
-               console.log(resultado.localidade);
+                this.endereco = {...resultado};
             },
         });
     }
+
+    getEndereco() {
+        return this.endereco;
+    }
+
 }
