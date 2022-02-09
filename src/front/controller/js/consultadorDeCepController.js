@@ -1,24 +1,35 @@
-const campoCep = $('#cep');
-const submitCep = $('#submit-cep');
-const campoUf = $('#estado');
-const campoCidade = $('#cidade');
-const campoBairro = $('#bairro');
-const campoRua = $('#rua');
-let consultadorDeCep = new ConsultadorDeCep();
-
-submitCep.on('click', (e) => {
-    e.preventDefault();
-    consultadorDeCep.consultaCep(campoCep.val());
-    setTimeout(() => {
-        preencheFormulário();
-    }, 1000);
-});
-
-function preencheFormulário() {
-    let endereco = consultadorDeCep.getEndereco();
-    campoUf.val(endereco.uf);
-    campoCidade.val(endereco.localidade);
-    campoBairro.val(endereco.bairro);
-    campoRua.val(endereco.logradouro);
-    console.log(endereco);
+class ConsultadorDeCepController {
+    constructor() {
+        this.consultadorDeCep;
+        this.consultadorDeCepView = new ConsultadorDeCepView;
+        this.cep;
+    }
+    gerenciaValidacaoDeCep() {
+        this.consultadorDeCep = new ConsultadorDeCep();
+        const campoCep = $('#cep');
+        this.cep = campoCep.val();
+        if (this.consultadorDeCep.validaCep(cep))
+            this.gerenciaConsultaDeCep();
+        else
+            this.consultadorDeCepView.adicionaCorAlerta(campoCep, 'alert-danger');
+    }
+    gerenciaConsultaDeCep() {
+        this.consultadorDeCep.consultaCep(this.cep);
+    }
+    gerenciaPreenchimentoForm() {
+        let endereco = this.consultadorDeCep.getEndereco();
+        console.log(endereco);
+        this.consultadorDeCepView.preencheForm( $('#estado'), 
+                                                $('#cidade'),
+                                                $('#bairro'),
+                                                $('#rua'),
+                                                endereco);
+    }
 }
+
+const consultadorDeCepController = new ConsultadorDeCepController();
+$('#submit-cep').on('click', (e) => {
+    e.preventDefault();
+    consultadorDeCepController.gerenciaValidacaoDeCep();
+    setTimeout(() => {consultadorDeCepController.gerenciaPreenchimentoForm();}, 1000);
+});
