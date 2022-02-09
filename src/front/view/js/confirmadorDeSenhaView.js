@@ -1,4 +1,4 @@
-class AlteradorDeCores {
+class ConfirmadorDeSenhaView {
     adicionaCorAlerta(elemento, novaClasse) {
         elemento.addClass(novaClasse);
     }
