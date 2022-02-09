@@ -1,4 +1,4 @@
 
-label, input {
+form * {
     display: block;
 }
