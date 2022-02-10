@@ -18,7 +18,6 @@ class ValidadorDeEmailController {
             this.emailValido = false;     
         }
     }
-
     enviaDadosLogin() {
         if (this.emailValido && $('#senha').val().length != 0)
             alert('Login realizado com sucesso!');
