@@ -10,16 +10,20 @@
 </head>
 <body>
 
-    <main>
+    <main class="d-flex justify-content-center align-items-center">
         <form action="">
-            <label for="email">Usuário (e-mail):</label>
-            <input type="text" id="email">
+            <div class="d-flex flex-column">
+                <label for="email">Usuário (e-mail):</label>
+                <input type="text" class="form-control" id="email">
+            </div>
 
-            <label for="senha-usuario">Senha:</label>
-            <input type="password" id="senha">
+            <div class="d-flex flex-column">
+                <label for="senha-usuario">Senha:</label>
+                <input type="password" class="form-control" id="senha">
+                <input type="submit" class="botaoForm m-2" id="submit" value="Enviar">
+            </div>
             <a href="./recuperacao.html">esqueci minha senha</a>
 
-            <input type="submit" id="submit" value="Enviar">
         </form>
     </main>
 
