@@ -24,14 +24,18 @@ main {
     color: white;
     border: none;
     border-radius: 5px;
-    transition: all 0.3s;
+    transition: font-size 0.3s, background-color 0.1s;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
 .botaoForm:hover{    
     font-size: large;
-    
+}
+
+.botaoForm:active{    
+    background-color: #5a828b;
+    font-size: large;
 }
 
 .inputBotao{
