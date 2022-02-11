@@ -6,128 +6,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../view/style.css">
+    <link rel="icon" type="imagem/x-icon" href="../../assets/imgs/batsLogo-removebg-preview.png">
     <title>Batstrap - Cadastro</title>
 </head>
 <body>
 
-    <main class="d-flex justify-content-center align-items-center">
-        <form action="" class="p-1">
-            <div class="form-row"> 
-                <div class="form-group col-md-4">
-                    <label for="nome">Nome:</label>
-                    <input type="text" class="form-control" id="nome">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../../../assets/imgs/batsLogo-removebg-preview.png" width="80" height="80" alt="Imagem logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
+            <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../view/detalhes.html">Detalhes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../view/contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./controller/cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./controller/login.html">Login</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    
+        <main class="d-flex justify-content-center align-items-center">
+            <form action="">
+                <div class="form-row"> 
+                    <div class="form-group col-md-4"> 
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome">
+                    </div>
+
+                    <div class="form-group col-md-4"> 
+                        <label for="nome">Email:</label>
+                        <input type="text"  class="form-control" id="email">
+                    </div>
                 </div>
 
-            <div class="form-group col-md-4"> 
-            <label for="nome">Email:</label>
-            <input type="text"  class="form-control" id="email">
-            </div>
-
-            </div>
-
-            <div class="form-row"> 
-                <div class="form-group col-md-4">
-
-                     <label for="nome">Senha:</label>
-                     <input type="password" class="form-control" id="senha">
-                 
+                <div class="form-row"> 
+                    <div class="form-group col-md-4">
+                        <label for="nome">Senha:</label>
+                        <input type="password" class="form-control" id="senha">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="nome">Confirme a Senha:</label>
+                        <input type="password" class="form-control" id="confirmacao-senha">
+                    </div>
                 </div>
 
-                 <div class="form-group col-md-4">
-
-                    <label for="nome">Confirme a Senha:</label>
-                    <input type="password" class="form-control" id="confirmacao-senha">
-
-                </div>
-
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-4">
-
-                    <label for="nome">RG:</label>
-                    <input type="text" class="form-control" id="RG">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="nome">RG:</label>
+                        <input type="text" class="form-control" id="RG">
+                    </div> 
                 
-                </div> 
-               
-                <div class="form-group col-md-4">
-
-                    <label for="nome">CEP:</label>
-
-                    <div class="inputBotao">  
-                        <input type="text" class="form-control" id="cep">                    
-                        <input type="submit" class = "botaoForm ml-2" value="verificar CEP" id="submit-cep">
+                    <div class="form-group col-md-4">
+                        <label for="nome">CEP:</label>
+                        <div class="inputBotao">  
+                            <input type="text" class="form-control" id="cep">                    
+                            <input type="submit" class = "botaoForm ml-2" value="verificar CEP" id="submit-cep">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="form-row">
-                    <div class="form-group col-md-2">
-            
-                        <label for="estado">Estado:</label>
-                        <input type="text" class="form-control" id="estado">
+                <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="estado">Estado:</label>
+                            <input type="text" class="form-control" id="estado">
+                        </div>
 
-                     </div>
+                        <div class="form-group col-md-2">
+                            <label for="cidade">cidade:</label>
+                            <input type="text" class="form-control" id="cidade">
+                        </div>
 
-                     <div class="form-group col-md-2">
-
-                        <label for="cidade">cidade:</label>
-                        <input type="text" class="form-control" id="cidade">
-
-                    </div>
-
-                    <div class="form-group col-md-2">
-
-                     <label for="bairro">Bairro:</label>
-                     <input type="text" class="form-control" id="bairro">
-
-                    </div>
-
-                    <div class="form-group col-md-3">
-
-                     <label for="rua">Rua:</label>
-                     <input type="text" class="form-control" id="rua">
-
-                    </div>
-
-             </div>
-
-
-            <div class="form-row">  
-                
-                <div class="form-group col-md-2">  
-
-                    <label for="numero">Número:</label>
-                    <input type="text" class="form-control" id="numero">
-
+                        <div class="form-group col-md-2">
+                            <label for="bairro">Bairro:</label>
+                            <input type="text" class="form-control" id="bairro">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="rua">Rua:</label>
+                            <input type="text" class="form-control" id="rua">
+                        </div>
                 </div>
-
-                <div class="col-md-4 mb-3">  
-
-                    <label for="complemento">Complemento:</label>
-
-                    <div class="inputBotao">  
-                        <input type="text" class="form-control" id="complemento">   
-                        <input type="submit" class="botaoForm ml-2"  value="Enviar">  
-                    </div>         
-                                   
-                    
-                </div>     
-                     
-                             
-
-            </div>
-
-          
-
-                              
-              
-
-            
-            
-        </form>
-
+                <div class="form-row">  
+                    <div class="form-group col-md-2">  
+                        <label for="numero">Número:</label>
+                        <input type="text" class="form-control" id="numero">
+                    </div>
+                    <div class="col-md-4 mb-3">  
+                        <label for="complemento">Complemento:</label>
+                        <div class="inputBotao">  
+                            <input type="text" class="form-control" id="complemento">   
+                            <input type="submit" class="botaoForm ml-2"  value="Enviar">  
+                        </div>         
+                    </div>     
+                </div>
+            </form>
     </main>
+    
+    
+    <footer>
+        <div class="card text-center">
+            <div class="card-footer text-muted">
+                <p class="copyright"> &copy; Todos os Direitos Reservados -
+                    <a href="https://github.com/hadonias"> Hadonias leite -</a> 
+                    <a href="https://github.com/douglasmdev"> Douglas Montes -</a>
+                    <a href="https://github.com/asnts"> Annanda Santos -</a>
+                    <a href="https://github.com/Gabriella-Rodrigues"> Gabriela Rodriguez - </a>  2022 &copy;            
+                </p>
+            </div>
+        </div>
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
