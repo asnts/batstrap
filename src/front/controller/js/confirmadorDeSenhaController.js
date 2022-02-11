@@ -8,11 +8,11 @@ class ConfirmadorDeSenhaController {
         let senha = campoSenha.val();
         let confirmacaoSenha = campoConfirmacaoSenha.val();
         if (confirmadorDeSenha.confirmaSenha(senha, confirmacaoSenha)) {
-            confirmadorDeSenhaView.adicionaCorAlerta(campoConfirmacaoSenha, 'alert-success');
-            confirmadorDeSenhaView.removeCorAlerta(campoConfirmacaoSenha, 'alert-danger');
+            confirmadorDeSenhaView.removeCorAlerta(campoConfirmacaoSenha, 'dado-invalido');
+            confirmadorDeSenhaView.adicionaCorAlerta(campoConfirmacaoSenha, 'dado-valido');
         } else {
-            confirmadorDeSenhaView.adicionaCorAlerta(campoConfirmacaoSenha, 'alert-danger');
-            confirmadorDeSenhaView.removeCorAlerta(campoConfirmacaoSenha, 'alert-success');
+            confirmadorDeSenhaView.removeCorAlerta(campoConfirmacaoSenha, 'dado-valido');
+            confirmadorDeSenhaView.adicionaCorAlerta(campoConfirmacaoSenha, 'dado-invalido');
         }
     }
 
