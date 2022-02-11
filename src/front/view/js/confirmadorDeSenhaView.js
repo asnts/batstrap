@@ -1,8 +1,5 @@
-class ConfirmadorDeSenhaView {
-    adicionaCorAlerta(elemento, novaClasse) {
-        elemento.addClass(novaClasse);
-    }
-    removeCorAlerta(elemento, classe) {
-        elemento.removeClass(classe);
+class ConfirmadorDeSenhaView extends ValidadorDeDadoView {
+    constructor() {
+        super();
     }
 }

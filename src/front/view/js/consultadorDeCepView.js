@@ -1,10 +1,8 @@
-class ConsultadorDeCepView {
-    adicionaCorAlerta(elemento, novaClasse) {
-        elemento.addClass(novaClasse);
+class ConsultadorDeCepView extends ValidadorDeDadoView {
+    constructor() {
+        super();
     }
-    removeCorAlerta(elemento, classe) {
-        elemento.removeClass(classe);
-    }
+
     preencheForm(campoUf, campoCidade, campoBairro, campoRua, endereco) {
         campoUf.val(endereco.uf);
         campoCidade.val(endereco.localidade);

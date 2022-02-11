@@ -8,10 +8,14 @@ class ConsultadorDeCepController {
         this.consultadorDeCep = new ConsultadorDeCep();
         const campoCep = $('#cep');
         this.cep = campoCep.val();
-        if (this.consultadorDeCep.validaCep(cep))
+        if (this.consultadorDeCep.validaCep(this.cep)) {
+            this.consultadorDeCepView.removeCorAlerta(campoCep, 'dado-invalido');
+            this.consultadorDeCepView.adicionaCorAlerta(campoCep, 'dado-valido');
             this.gerenciaConsultaDeCep();
-        else
-            this.consultadorDeCepView.adicionaCorAlerta(campoCep, 'alert-danger');
+        } else {
+            this.consultadorDeCepView.removeCorAlerta(campoCep, 'dado-valido');
+            this.consultadorDeCepView.adicionaCorAlerta(campoCep, 'dado-invalido');
+        }
     }
     gerenciaConsultaDeCep() {
         this.consultadorDeCep.consultaCep(this.cep);
