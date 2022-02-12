@@ -2,19 +2,19 @@ class ValidadorDeEmailController {
 
     constructor() {
         this.emailValido = false;
+        this.validadorDeEmail = new ValidadorDeEmail();
     }
     gerenciaValidacaoDeEmail() {
-        const validadorDeEmail = new ValidadorDeEmail();
         const validadorDeEmailView = new ValidadorDeEmailView;
         const campoEmail = $('#email');
         const email = campoEmail.val();
-        if (validadorDeEmail.validaEmail(email)) {
-            validadorDeEmailView.removeCorAlerta(campoEmail, 'alert-danger');
-            validadorDeEmailView.adicionaCorAlerta(campoEmail, 'alert-success');
+        if (this.validadorDeEmail.validaEmail(email)) {
+            validadorDeEmailView.removeCorAlerta(campoEmail, 'dado-invalido');
+            validadorDeEmailView.adicionaCorAlerta(campoEmail, 'dado-valido');
             this.emailValido = true;
         } else {
-            validadorDeEmailView.removeCorAlerta(campoEmail, 'alert-success');
-            validadorDeEmailView.adicionaCorAlerta(campoEmail, 'alert-danger');
+            validadorDeEmailView.removeCorAlerta(campoEmail, 'dado-valido');
+            validadorDeEmailView.adicionaCorAlerta(campoEmail, 'dado-invalido');
             this.emailValido = false;     
         }
     }
@@ -30,7 +30,8 @@ const validadorDeEmailController = new ValidadorDeEmailController();
 $('#email').on('input', () => {
     validadorDeEmailController.gerenciaValidacaoDeEmail();
 });
-$('#submit').on('click', (evento) => {
+
+$('#submit-cadastro').on('click', (evento) => {
     evento.preventDefault();
     validadorDeEmailController.enviaDadosLogin();
 });
