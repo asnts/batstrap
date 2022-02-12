@@ -5,9 +5,9 @@ class RecuperadorDeSenhaController extends ValidadorDeEmailController {
 
     enviaDadosRecuperacao() {
         if (this.emailValido)
-            alert('valido');
+            alert('Email de recuperação enviado!');
         else
-            alert('inválido');
+            alert('Email inválido, informe um email válido');
     }
 }
 
