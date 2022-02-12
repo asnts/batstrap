@@ -71,8 +71,3 @@ footer > div {
     border: 0px;
     border-radius: 0px!important;
 }
-
-.card-footer a, p {
-    margin: 0;
-    color: whitesmoke!important;
-}
