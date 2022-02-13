@@ -28,6 +28,29 @@ main {
     height: 100%;
 }
 
+.carosselContainer{
+    width: 100%;
+    background-color: #0d0e0e6e; 
+    height: 80%;
+    
+
+}
+
+.carosselContainer .carosselItem{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.imgCarousel{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 60%;   
+    
+}
+
+
 form {
     width: 100%;
 }
@@ -71,8 +94,15 @@ form {
     background-color: rgb(173, 255, 173)!important;
 }
 
-footer > div {
+.card-footer{
     background-color: #2A3C40!important;
     border: 0px;
     border-radius: 0px!important;
+    position: relative;
+    
+
+}
+
+footer a{
+    color: whitesmoke;
 }
