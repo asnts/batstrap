@@ -1,7 +1,12 @@
 class ConsultadorDeCep {
 
+    constructor() {
+        this.cepExpReg = /^[0-9]{8}$/
+    }
+
     validaCep(cep) {
-        return true;
+        cep = cep.replace('-','');
+        return this.cepExpReg.test(cep);
     }
 
     consultaCep(cep) {
