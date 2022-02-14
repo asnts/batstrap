@@ -21,6 +21,10 @@
 
 .flip-card-back {
   transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .card {
