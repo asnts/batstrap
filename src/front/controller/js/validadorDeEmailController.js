@@ -32,6 +32,5 @@ $('#email').on('input', () => {
 });
 
 $('#submit-cadastro').on('click', (evento) => {
-    evento.preventDefault();
     validadorDeEmailController.enviaDadosLogin();
 });
