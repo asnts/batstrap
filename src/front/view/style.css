@@ -30,6 +30,11 @@ main {
     min-height: 75%;
 }
 
+.botoes-descricao {
+    width: 40vw;
+    margin: 2% 30vw 2% 30vw;
+    line-height: 40px;
+}
 
 .login, .recuperacao {
     width: 50%;
@@ -53,7 +58,6 @@ main {
     width: 100%;
     object-fit: cover;
     object-position: 0 60%;   
-    
 }
 
 form {
@@ -112,4 +116,17 @@ footer > div {
 
 footer a{
     color: whitesmoke;
+}
+
+.borda-cor-especial{
+    border-color: #2a3c40;
+}
+
+.tamanho-card{
+    max-width: 18rem;
+}
+
+.img-posicao{
+    object-fit: cover;
+    height: 300px;
 }
