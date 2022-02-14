@@ -18,6 +18,12 @@ class ValidadorDeEmailController {
             this.emailValido = false;     
         }
     }
+    enviaDadosCadastro() {
+        if(this.emailValido)
+            alert('Cadastro realizado com sucesso');
+        else
+            alert('Houve um erro no seu cadastro.\nPor favor, tente novamente');
+    }
     enviaDadosLogin() {
         if (this.emailValido && $('#senha').val().length != 0)
             alert('Login realizado com sucesso!');
@@ -32,5 +38,9 @@ $('#email').on('input', () => {
 });
 
 $('#submit-cadastro').on('click', (evento) => {
+    validadorDeEmailController.enviaDadosCadastro();
+});
+
+$('#submit-login').on('click', (evento) => {
     validadorDeEmailController.enviaDadosLogin();
 });
