@@ -24,6 +24,10 @@ body{
     color: white!important;
 }
 
+.nav-link:hover {
+    color: rgb(83, 170, 83)!important;
+}
+
 main {
     width: 100%;
     height: fit-content;
@@ -111,11 +115,14 @@ footer {
     margin: 2% 0 0 0;
 }
 
+footer p {
+    margin: 0;
+}
+
 footer > div {
     background-color: #2A3C40!important;
     border: 0px;
     border-radius: 0px!important;
-    /* position: relative; */
 }
 
 footer a{
@@ -123,7 +130,6 @@ footer a{
 }
 
 .borda-cor-especial{
-    /* border-color: #2a3c40; */
     background-color: #2a3c40;
     color: white;
 }
