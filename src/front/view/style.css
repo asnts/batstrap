@@ -8,7 +8,8 @@ body{
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     background-image: linear-gradient(to bottom,whitesmoke,#A6A6A6);
-    background-repeat: no-repeat;
+    background-image: url(../../../assets/imgs/batsBackground.png);
+    background-repeat: repeat;
     background-attachment: fixed;
 }
 
@@ -24,11 +25,36 @@ body{
     color: white!important;
 }
 
+.nav-link:hover {
+    color: rgb(83, 170, 83)!important;
+}
+
 main {
     width: 100%;
     height: fit-content;
     min-height: 75%;
 }
+
+.descricao-breve, .descricao-detalhada {
+    margin-top: 2%;
+}
+
+.chamada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pessoas-sorrindo-container {
+    width: 60vw;
+}
+
+
+.pessoas-sorrindo-container img {
+    width: 100%;
+    height: 100%;
+}
+
 
 .botoes-descricao {
     width: 40vw;
@@ -107,11 +133,14 @@ footer {
     margin: 2% 0 0 0;
 }
 
+footer p {
+    margin: 0;
+}
+
 footer > div {
     background-color: #2A3C40!important;
     border: 0px;
     border-radius: 0px!important;
-    /* position: relative; */
 }
 
 footer a{
@@ -119,11 +148,20 @@ footer a{
 }
 
 .borda-cor-especial{
-    border-color: #2a3c40;
+    background-color: #2a3c40;
+    color: white;
 }
 
 .tamanho-card{
     max-width: 18rem;
+}
+
+.tamanho-card a {
+    color: whitesmoke;
+}
+
+.tamanho-card a:hover {
+    color: rgb(83, 170, 83);
 }
 
 .img-posicao{
