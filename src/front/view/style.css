@@ -30,6 +30,10 @@ main {
     min-height: 75%;
 }
 
+.descricao-breve, .descricao-detalhada {
+    margin-top: 2%;
+}
+
 .botoes-descricao {
     width: 40vw;
     margin: 2% 30vw 2% 30vw;
