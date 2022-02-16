@@ -123,11 +123,21 @@ footer a{
 }
 
 .borda-cor-especial{
-    border-color: #2a3c40;
+    /* border-color: #2a3c40; */
+    background-color: #2a3c40;
+    color: white;
 }
 
 .tamanho-card{
     max-width: 18rem;
+}
+
+.tamanho-card a {
+    color: whitesmoke;
+}
+
+.tamanho-card a:hover {
+    color: rgb(83, 170, 83);
 }
 
 .img-posicao{
